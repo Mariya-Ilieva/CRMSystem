@@ -1,7 +1,6 @@
 import logging
 import datetime
 from django.contrib import messages
-from django.contrib.auth import get_user_model
 from django.core.mail import send_mail
 from django.http.response import JsonResponse
 from django.shortcuts import render, redirect, reverse
@@ -14,7 +13,6 @@ from .forms import LeadModelForm, CustomUserCreationForm, AssignAgentForm, LeadC
 
 
 logger = logging.getLogger(__name__)
-UserModel = get_user_model()
 
 
 class SignupView(generic.CreateView):
